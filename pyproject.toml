@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "nullcv"
+version = "0.1.0"
+description = "Proof-of-Work, Not Promises - A decentralized talent marketplace"
+authors = ["NullCV Team"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.2"
+pydantic = "^2.11.4"
+pydantic-settings = "^2.9.1"
+python-multipart = "^0.0.20"
+python-jose = {extras = ["cryptography"], version = "^3.4.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+sqlalchemy = "^2.0.40"
+alembic = "^1.15.2"
+psycopg2-binary = "^2.9.10"
+asyncpg = "^0.30.0"
+python-dotenv = "^1.1.0"
+cryptography = "^44.0.3"
+requests = "^2.32.3"
+aiohttp = "^3.11.18"
+fastapi-socketio = "^0.0.10"
+redis = "^6.1.0"
+celery = "^5.5.2"
+flower = "^2.0.1"
+pyopenssl = "^25.0.0"
+watchdog = "^6.0.0"
+pycryptodome = "^3.22.0"
+pyjwt = "^2.10.1"
+dynaconf = "^3.2.11"
+structlog = "^25.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
