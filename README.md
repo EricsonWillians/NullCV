@@ -1,124 +1,185 @@
-# NullCV: Proof-of-Work, Not Promises
-
-## Core Philosophy
-
-NullCV represents a radical departure from conventional talent marketplaces, built on a foundation of anti-hierarchical principles:
-
-```
-workValue = actualOutput, not(credentials + connections + conformity)
-
-```
-
-The platform rejects the fundamental premises of established job sites:
-
-- **Against LinkedIn's performative professionalism** - No cultural signaling, no endorsement farming, no algorithmic popularity contests
-- **Against Upwork/Fiverr's extractive middleman model** - Zero platform fees, no algorithmic sorting, no race-to-bottom mechanics
-- **Against traditional hiring architectures** - No resumes, no education history, no career narrative construction
-- **Against ghost recruiters** - No intermediaries, no duplicated listings, no hidden client identities
-
-## Technical Architecture
-
-### Decentralized Foundation
-
-NullCV operates on a peer-to-peer network architecture using a combination of:
-
-- **Sovereign data persistence**: IPFS for content storage with encrypted metadata
-- **Smart contract backbone**: Ethereum-based escrow and reputation mechanics
-- **Federation protocol**: ActivityPub-compatible nodes allowing cross-instance communication
-- **Zero-knowledge identity**: zk-SNARKs for anonymous-yet-verified identity and credential proofs
-
-### Identity System
-
-```
-User = {
-  primaryKey: cryptographicSignature,
-  publicIDs: [optional pseudonyms],
-  workGraph: [completed work with verifiable proof],
-  attestations: [cryptographically signed peer validations],
-  skills: [auto-generated from verified work history]
-}
-
-```
-
-Identity exists solely through work output and peer attestation - never through self-declaration.
-
-### Reputation Mechanics
-
-The platform employs a multi-dimensional reputation system:
-
-1. **Proof-of-Completion** - Immutable record of work delivered
-2. **Value Verification** - Client-side cryptographic confirmation of accepted deliverables
-3. **Skill Emergence** - Pattern-matching algorithms identify competencies from work history
-4. **Stake-based Accountability** - Mutual escrow guarantees with threshold-release mechanics
-
-## User Experience
-
-### For Workers
-
-1. **Anonymous Profile Creation**
-    - Generate cryptographic identity
-    - Optional pseudonym selection
-    - Zero personal information required
-2. **Evidence-Based Skill Representation**
-    - Upload past work samples (automatically hashed and timestamped)
-    - Submit to peer verification process
-    - Skills are derived from work, never self-declared
-3. **Job Discovery**
-    - Client work requests are matched to proven capabilities
-    - Total pricing transparency (no hidden negotiations)
-    - Direct cryptographic communication with clients
-4. **Work Execution**
-    - All deliverables are versioned and hashed on submission
-    - Payment release is tied to cryptographic acceptance
-    - Disputes resolved through multi-signature arbitration
-
-### For Clients
-
-1. **Specification Publishing**
-    - Detailed work requirements cryptographically signed
-    - Fixed or dynamic budget with transparent escrow
-    - Optional privacy settings for sensitive projects
-2. **Talent Selection**
-    - Filter by verified work history and proven skills
-    - Review evidence-based capabilities, not claims
-    - Direct communication without intermediaries
-3. **Collaboration**
-    - Milestone-based acceptance triggers automatic payments
-    - Revisions tracked in immutable version histories
-    - Feedback directly affects worker's capability graph
-
-## Economic Model
-
-NullCV uses a token-based economic system designed for maximum autonomy:
-
-- **Zero platform fees** - Infrastructure maintained through voluntary patronage
-- **Escrow-based protection** - Funds locked in smart contracts until work acceptance
-- **Micro-reputation tokens** - Non-transferable reputation tokens accrue from verified work
-- **Anti-gaming mechanics** - Algorithmic detection of collusion or manipulation attempts
-- **Value-capture resistance** - Governance structures prevent venture capital extraction
-
-## Governance Structure
-
-The platform operates as a digital commons with:
-
-- **Algorithmic transparency** - All matching and ranking code is open source
-- **Distributed governance** - Protocol changes require multi-stakeholder consensus
-- **User sovereignty** - Complete data portability and right to exit
-- **Federation standards** - Compatible with other ethical work platforms
-
-## The NullCV Difference
-
-| Traditional Platforms | NullCV |
-| --- | --- |
-| Identity based on credentials | Identity based on verified output |
-| Profile-centric | Work-centric |
-| Corporate intermediation | Peer-to-peer direct exchange |
-| Proprietary algorithms | Open-source transparent mechanisms |
-| Extractive fee models | Zero-fee infrastructural commons |
-| Platform lock-in | Complete data sovereignty |
-| Competitive race-to-bottom | Collaborative skill verification |
-| Gameable reputation metrics | Cryptographically verified contributions |
+Here’s a full `README.md` manifesto for **NullCV** — equal parts call-to-arms, architecture, and developer rallying cry. It reads like a radical spec **disguised as a working protocol**:
 
 ---
 
-NullCV doesn't just improve the freelance marketplace - it fundamentally reimagines it, creating an anti-hierarchical system where only real work matters, intermediaries disappear, and genuine value cannot be faked or manufactured through social capital.
+```markdown
+# 🕳️ NullCV
+
+> Proof-of-Work, Not Promises  
+> A decentralized work protocol for those who refuse to beg.
+
+---
+
+## 💣 The Problem
+
+The modern job market is broken by design.  
+It rewards conformity over capability, branding over output, and obedience over truth.
+
+- **LinkedIn** reduces human potential to sanitized profiles and social signaling.
+- **Upwork/Fiverr** trap freelancers in race-to-the-bottom gladiator pits, extracting value for platform owners.
+- **Hiring** is a game of keywords, credentials, and algorithmic guesswork—not skill.
+
+NullCV rejects all of it.
+
+---
+
+## ✊ The Premise
+
+```
+
+workValue = actualOutput, not(credentials + connections + conformity)
+
+````
+
+No resumes.  
+No endorsements.  
+No cultural posturing.  
+Only the work.  
+Only the proof.
+
+---
+
+## 🧱 What Is NullCV?
+
+NullCV is an **anti-platform**.
+
+It’s a **peer-to-peer proof-of-work identity protocol**, built for humans who create value and refuse to beg for permission.
+
+At its core, NullCV is:
+
+- A **cryptographic identity system** with no resumes or bios
+- A **WorkGraph**: your actual contributions, timestamped and verifiable
+- A **zero-fee talent network** built on open protocols
+- A direct **attack on credentialism, gatekeeping, and algorithmic hiring**
+
+---
+
+## 🧠 How It Works
+
+### 🔐 Identity
+
+- Every user generates a **cryptographic keypair**
+- That key is their identity — no email, no signup
+- Optional pseudonyms may exist, but never replace the key
+
+### 📁 WorkGraph
+
+```ts
+User {
+  pubKey: string,
+  work: [
+    {
+      projectCID: string,             // IPFS hash
+      timestamp: string,              // blockchain or PGP timestamp
+      attestations: string[]          // cryptographic signatures from peers
+    }
+  ],
+  reputation: {
+    [skill]: score                    // non-transferable, earned through verified work
+  }
+}
+````
+
+### 🔎 Verification
+
+* Work is hashed and uploaded to IPFS
+* Trusted peers **review and sign** your work
+* Reputation accrues **only from reviewed, timestamped, real-world output**
+* No one can fake it. No one can buy it.
+
+### 💬 Matching
+
+* Clients post specs, not jobs
+* Specs match work histories — not resumes
+* Agreements are signed cryptographically and locked into escrow
+* Everything is open, audit-proof, and anti-exploit by design
+
+---
+
+## 💸 Economic Model
+
+* **0% platform fee**
+* No premium features. No bidding. No boost buttons.
+* Smart contract escrow + direct value transfer = **no middlemen**
+* Reputation cannot be sold, gamed, or transferred — ever
+
+---
+
+## ⚔️ Rage-Fueled Architecture
+
+| Layer        | Tech                      |
+| ------------ | ------------------------- |
+| Identity     | Ethereum Keypair / PGP    |
+| Storage      | IPFS                      |
+| Escrow       | Ethereum Smart Contracts  |
+| Comms        | ActivityPub / Matrix      |
+| Reputation   | zk-SNARKs / Signed Proofs |
+| Coordination | Git-based WorkGraphs      |
+
+> Designed to survive deplatforming, VC capture, and bullshit.
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Install the NullCV CLI
+curl -sSL https://nullcv.org/install.sh | bash
+
+# Generate your key
+nullcv keygen
+
+# Submit work
+nullcv submit ./my-project --tag "infra/docker" --private
+
+# Attest to others' work
+nullcv verify <pubKey> <projectCID>
+
+# View your WorkGraph
+nullcv graph
+```
+
+---
+
+## 🔍 Why This Exists
+
+Because some of us don’t want to be influencers.
+Because some of us build instead of brand.
+Because we’re tired of shouting into the algorithmic void hoping a recruiter gives a damn.
+
+Because we believe:
+
+> 🧱 **Proof-of-work is more sacred than proof-of-network.**
+> 🗡️ **The future of labor is cryptographic, sovereign, and honest.**
+
+---
+
+## 🕳️ Join the Rebellion
+
+This is not a startup.
+This is not a product.
+This is a weapon.
+
+* Clone the repo
+* Fork the protocol
+* Submit real work
+* Attest to others
+* Build a new world where labor is respected without permission
+
+> 🩸 No resumes. No gatekeepers. No begging.
+> Just proof.
+
+**→ [https://nullcv.org](https://nullcv.org)**
+
+---
+
+## 🧷 License
+
+[Anti-Exploitation License v1.0](./LICENSE) — Fork, fight, and keep it free.
+
+```
+
+---
+
+Would you like a version that's auto-rendered as a simple HTML site? Or a matching dark terminal-style theme for the landing page at `nullcv.org`?
+```
