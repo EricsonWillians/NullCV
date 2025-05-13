@@ -1,57 +1,72 @@
-"""Cryptographic identity utilities."""
-from eth_account import Account
-from eth_keys import keys
+"""
+Cryptographic identity and verification module.
+
+This module provides cryptographic utilities for:
+1. Key generation and management
+2. Data signing and verification
+3. Secure hashing
+4. Encryption/decryption of sensitive data
+"""
+
 import os
+import json
 import hashlib
-from typing import Tuple, Optional
 import base64
+import logging
+from typing import Any, Dict, NamedTuple, Optional, Union
+from datetime import datetime, timezone
 
-def generate_keypair() -> Tuple[str, str]:
-    """Generate a cryptographic keypair for user identity."""
-    # Ethereum-style key generation
-    entropy = os.urandom(32)
-    account = Account.create(entropy)
-    private_key = account.key.hex()
-    public_key = account.address
+import nacl.signing
+import nacl.encoding
+import nacl.hash
+import nacl.secret
+import nacl.public
+from nacl.exceptions import BadSignatureError
+
+# Configure logging
+logger = logging.getLogger(__name__)
+
+class KeyPair(NamedTuple):
+    """Cryptographic key pair."""
     
-    return private_key, public_key
+    private_key: str
+    public_key: str
 
-def sign_message(message: str, private_key: str) -> str:
-    """Sign a message with a private key."""
-    account = Account.from_key(private_key)
-    message_hash = hashlib.sha256(message.encode()).digest()
-    signed_message = account.sign_message(message_hash)
+
+def generate_keypair() -> KeyPair:
+    """
+    Generate a new Ed25519 key pair.
     
-    return signed_message.signature.hex()
-
-def verify_signature(message: str, signature: str, public_key: str) -> bool:
-    """Verify a signature using a public key."""
-    message_hash = hashlib.sha256(message.encode()).digest()
-    try:
-        # Recover the address from the signature
-        recovered_address = Account.recover_message(message_hash, signature=signature)
-        return recovered_address.lower() == public_key.lower()
-    except Exception:
-        return False
-
-def generate_identity() -> dict:
-    """Generate a complete cryptographic identity."""
-    private_key, public_key = generate_keypair()
-    return {
-        "private_key": private_key,
-        "public_key": public_key,
-        "created_at": import_time(),
-    }
-
-def hash_work_proof(content: bytes) -> str:
-    """Create a cryptographic hash of work as proof."""
-    return hashlib.sha256(content).hexdigest()
-
-def create_zero_knowledge_proof(private_key: str, challenge: str) -> str:
+    Returns:
+        A KeyPair named tuple containing private_key and public_key as hex strings
     """
-    Create a zero-knowledge proof that user possesses a private key
-    without revealing it.
+    # Generate a new signing key
+    signing_key = nacl.signing.SigningKey.generate()
+    
+    # Get the verify key (public key)
+    verify_key = signing_key.verify_key
+    
+    # Convert keys to hex format
+    private_key_hex = signing_key.encode(encoder=nacl.encoding.HexEncoder).decode('utf-8')
+    public_key_hex = verify_key.encode(encoder=nacl.encoding.HexEncoder).decode('utf-8')
+    
+    return KeyPair(private_key=private_key_hex, public_key=public_key_hex)
+
+
+def sign_data(data: Any, private_key_hex: str) -> str:
     """
-    # Simplified implementation - a real zk-SNARK would be used here
-    signature = sign_message(challenge, private_key)
-    return signature
+    Sign data with a private key.
+    
+    Args:
+        data: The data to sign
+        private_key_hex: Hex-encoded private key
+        
+    Returns:
+        A hex-encoded signature
+    """
+    # Convert data to JSON string if it's not already a string
+    if not isinstance(data, str):
+        data = json.dumps(data, sort_keys=True)
+    
+    # Convert private key from hex to binary
+    private_key_bytes = bytes.fromhex(private_key_hex
