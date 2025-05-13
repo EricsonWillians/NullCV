@@ -34,6 +34,8 @@ pycryptodome = "^3.22.0"
 pyjwt = "^2.10.1"
 dynaconf = "^3.2.11"
 structlog = "^25.3.0"
+eth-account = "^0.13.7"
+eth-keys = "^0.7.0"
 
 
 [tool.poetry.group.dev.dependencies]

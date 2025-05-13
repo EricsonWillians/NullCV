@@ -1,9 +1,14 @@
-"""Main FastAPI application instance for NullCV."""
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from nullcv.api.endpoints.users import router as users_router
+# Only add those that exist and work
+# from nullcv.api.endpoints.jobs import router as jobs_router
+# from nullcv.api.endpoints.identity import router as identity_router
+# from nullcv.api.endpoints.projects import router as projects_router
+# from nullcv.api.endpoints.reputation import router as reputation_router
+
 from nullcv.core.config import settings
-from nullcv.api.endpoints import router as api_router
 from nullcv.core.events import startup_event_handler, shutdown_event_handler
 from nullcv.api.middleware.logging import LoggingMiddleware
 
@@ -15,7 +20,6 @@ app = FastAPI(
     redoc_url="/api/redoc" if settings.DEBUG else None,
 )
 
-# Set up CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.CORS_ORIGINS,
@@ -24,12 +28,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Add custom middleware
 app.add_middleware(LoggingMiddleware)
 
-# Register event handlers
 app.add_event_handler("startup", startup_event_handler)
 app.add_event_handler("shutdown", shutdown_event_handler)
 
-# Include API router
-app.include_router(api_router, prefix="/api")
+# Add routers directly
+app.include_router(users_router, prefix="/api/users", tags=["users"])
+# app.include_router(jobs_router, prefix="/api/jobs", tags=["jobs"])
