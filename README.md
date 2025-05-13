@@ -1,8 +1,3 @@
-Here’s a full `README.md` manifesto for **NullCV** — equal parts call-to-arms, architecture, and developer rallying cry. It reads like a radical spec **disguised as a working protocol**:
-
----
-
-```markdown
 # 🕳️ NullCV
 
 > Proof-of-Work, Not Promises  
@@ -175,11 +170,4 @@ This is a weapon.
 
 ## 🧷 License
 
-[Anti-Exploitation License v1.0](./LICENSE) — Fork, fight, and keep it free.
-
-```
-
----
-
-Would you like a version that's auto-rendered as a simple HTML site? Or a matching dark terminal-style theme for the landing page at `nullcv.org`?
-```
+[The Cryptographic Commons License (CCL)](./LICENSE) — Fork, fight, and keep it free.
