@@ -170,4 +170,4 @@ This is a weapon.
 
 ## 🧷 License
 
-[Anti-Exploitation License v1.0](./LICENSE) — Fork, fight, and keep it free.
+[The Cryptographic Commons License (CCL)](./LICENSE) — Fork, fight, and keep it free.
