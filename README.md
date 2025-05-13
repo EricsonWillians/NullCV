@@ -1,75 +1,51 @@
-Here’s a full `README.md` manifesto for **NullCV** — equal parts call-to-arms, architecture, and developer rallying cry. It reads like a radical spec **disguised as a working protocol**:
-
----
-
-```markdown
 # 🕳️ NullCV
 
 > Proof-of-Work, Not Promises  
 > A decentralized work protocol for those who refuse to beg.
 
----
+![NullCV](https://nullcv.org/banner.png)
 
-## 💣 The Problem
+## 🔥 The Problem
 
-The modern job market is broken by design.  
-It rewards conformity over capability, branding over output, and obedience over truth.
+The job market is fundamentally broken:
 
-- **LinkedIn** reduces human potential to sanitized profiles and social signaling.
-- **Upwork/Fiverr** trap freelancers in race-to-the-bottom gladiator pits, extracting value for platform owners.
-- **Hiring** is a game of keywords, credentials, and algorithmic guesswork—not skill.
+- **LinkedIn** reduces humans to sanitized profiles and social theater
+- **Upwork/Fiverr** trap talent in extractive race-to-the-bottom platforms
+- **Resumes** reward credential collection, not capability
+- **Hiring** has become algorithmic gatekeeping, favoring keywords over competence
 
-NullCV rejects all of it.
+We didn't come to play their game better. **We came to end it.**
 
----
+## 💡 The Solution: NullCV
 
-## ✊ The Premise
+NullCV is a **decentralized proof-of-work identity protocol** that eliminates credentials, middlemen, and algorithmic bias.
 
 ```
-
 workValue = actualOutput, not(credentials + connections + conformity)
+```
 
-````
-
-No resumes.  
-No endorsements.  
-No cultural posturing.  
-Only the work.  
-Only the proof.
-
----
-
-## 🧱 What Is NullCV?
-
-NullCV is an **anti-platform**.
-
-It’s a **peer-to-peer proof-of-work identity protocol**, built for humans who create value and refuse to beg for permission.
-
-At its core, NullCV is:
-
-- A **cryptographic identity system** with no resumes or bios
-- A **WorkGraph**: your actual contributions, timestamped and verifiable
-- A **zero-fee talent network** built on open protocols
-- A direct **attack on credentialism, gatekeeping, and algorithmic hiring**
-
----
+**Core principles:**
+- Your work speaks for itself
+- Verification over certification
+- Zero platform fees
+- Cryptographic identity, not social performance
+- Direct value exchange without extractive middlemen
 
 ## 🧠 How It Works
 
 ### 🔐 Identity
+- Every user generates a **cryptographic keypair** - that's your identity
+- No email, no signup, no social validation required
+- Optional pseudonyms for human readability
 
-- Every user generates a **cryptographic keypair**
-- That key is their identity — no email, no signup
-- Optional pseudonyms may exist, but never replace the key
-
-### 📁 WorkGraph
+### 📊 WorkGraph
 
 ```ts
 User {
   pubKey: string,
   work: [
     {
-      projectCID: string,             // IPFS hash
+      projectCID: string,             // IPFS hash of your work
       timestamp: string,              // blockchain or PGP timestamp
       attestations: string[]          // cryptographic signatures from peers
     }
@@ -78,47 +54,42 @@ User {
     [skill]: score                    // non-transferable, earned through verified work
   }
 }
-````
+```
 
-### 🔎 Verification
+### ✅ Verification
+- Work is hashed and uploaded to IPFS
+- Trusted peers review and cryptographically sign your work
+- Reputation accrues only from verified, timestamped, real-world output
+- Zero-knowledge proofs enable verification without revealing sensitive details
 
-* Work is hashed and uploaded to IPFS
-* Trusted peers **review and sign** your work
-* Reputation accrues **only from reviewed, timestamped, real-world output**
-* No one can fake it. No one can buy it.
+### 🤝 Matching
+- Clients post specifications, not job listings
+- Specs match work histories, not resumes
+- Direct client-worker relationships without platform interference
+- Agreements are cryptographically signed and locked in escrow
 
-### 💬 Matching
+## 🏗️ Architecture
 
-* Clients post specs, not jobs
-* Specs match work histories — not resumes
-* Agreements are signed cryptographically and locked into escrow
-* Everything is open, audit-proof, and anti-exploit by design
+| Layer        | Technology                 |
+|--------------|----------------------------|
+| Identity     | Ethereum Keypair / PGP     |
+| Storage      | IPFS                       |
+| Escrow       | Ethereum Smart Contracts   |
+| Comms        | ActivityPub / Matrix       |
+| Reputation   | zk-SNARKs / Signed Proofs  |
+| Coordination | Git-based WorkGraphs       |
 
----
+## 🛡️ Safeguards
 
-## 💸 Economic Model
+NullCV implements critical protections against dystopic outcomes:
 
-* **0% platform fee**
-* No premium features. No bidding. No boost buttons.
-* Smart contract escrow + direct value transfer = **no middlemen**
-* Reputation cannot be sold, gamed, or transferred — ever
+- **Right to Reinvention**: Reputation decay and clean slate protocols
+- **Human-in-the-Loop**: No fully automated reputation penalties
+- **Anti-Plutocratic Design**: Contribution value over economic power
+- **Career Mobility**: Skill bridges and cross-domain transitions
+- **Multiple Entry Paths**: Skill challenges and mentorship programs
 
----
-
-## ⚔️ Rage-Fueled Architecture
-
-| Layer        | Tech                      |
-| ------------ | ------------------------- |
-| Identity     | Ethereum Keypair / PGP    |
-| Storage      | IPFS                      |
-| Escrow       | Ethereum Smart Contracts  |
-| Comms        | ActivityPub / Matrix      |
-| Reputation   | zk-SNARKs / Signed Proofs |
-| Coordination | Git-based WorkGraphs      |
-
-> Designed to survive deplatforming, VC capture, and bullshit.
-
----
+See our [Protective Guidelines](./docs/PROTECTIVE_GUIDELINES.md) for our comprehensive safeguards.
 
 ## 🚀 Getting Started
 
@@ -126,60 +97,71 @@ User {
 # Install the NullCV CLI
 curl -sSL https://nullcv.org/install.sh | bash
 
-# Generate your key
+# Generate your cryptographic identity
 nullcv keygen
 
-# Submit work
+# Submit work for verification
 nullcv submit ./my-project --tag "infra/docker" --private
 
-# Attest to others' work
+# Verify others' work
 nullcv verify <pubKey> <projectCID>
 
 # View your WorkGraph
 nullcv graph
 ```
 
----
-
-## 🔍 Why This Exists
-
-Because some of us don’t want to be influencers.
-Because some of us build instead of brand.
-Because we’re tired of shouting into the algorithmic void hoping a recruiter gives a damn.
+## 🤔 Why NullCV Exists
 
 Because we believe:
 
-> 🧱 **Proof-of-work is more sacred than proof-of-network.**
-> 🗡️ **The future of labor is cryptographic, sovereign, and honest.**
+> **Proof-of-work is more sacred than proof-of-network.**
+>
+> **The future of labor is cryptographic, sovereign, and honest.**
 
----
+We reject a world where your value is determined by:
+- Who you know
+- Where you went to school
+- How well you perform social conformity
+- How effectively you game recruitment algorithms
 
-## 🕳️ Join the Rebellion
+## 👥 Who Should Join
 
-This is not a startup.
-This is not a product.
-This is a weapon.
+- **Builders** who are tired of credential games
+- **Clients** who want real talent, not keyword matching
+- **Knowledge workers** trapped in resume hell
+- **Self-taught professionals** prejudiced by credentialism
+- **Anyone** who believes capability trumps credentials
 
-* Clone the repo
-* Fork the protocol
-* Submit real work
-* Attest to others
-* Build a new world where labor is respected without permission
+## 🧩 How to Contribute
 
-> 🩸 No resumes. No gatekeepers. No begging.
-> Just proof.
+NullCV is an open protocol, not a closed platform. Join us:
 
-**→ [https://nullcv.org](https://nullcv.org)**
+1. **Use it**: Generate your key, submit work, verify others
+2. **Develop it**: Contribute to our [GitHub repo](https://github.com/nullcv)
+3. **Spread it**: Tell others who are tired of begging for work
+4. **Fork it**: Create specialized implementations for different domains
 
----
+## 🌐 Community
+
+- **Matrix**: [#nullcv:matrix.org](https://matrix.to/#/#nullcv:matrix.org)
+- **Forum**: [forum.nullcv.org](https://forum.nullcv.org)
+- **Git**: [github.com/nullcv](https://github.com/nullcv)
+- **Docs**: [docs.nullcv.org](https://docs.nullcv.org)
+
+## 🔮 Roadmap
+
+- **Q2 2023**: Protocol specification and reference implementation
+- **Q3 2023**: CLI tools and developer API
+- **Q4 2023**: Web interface and initial network growth
+- **Q1 2024**: Mobile clients and expanded verification tools
+- **Q2 2024**: Cross-chain support and enhanced privacy features
 
 ## 🧷 License
 
-[Anti-Exploitation License v1.0](./LICENSE) — Fork, fight, and keep it free.
-
-```
+[The Cryptographic Commons License (CCL)](./LICENSE) — Fork, fight, and keep it free.
 
 ---
 
-Would you like a version that's auto-rendered as a simple HTML site? Or a matching dark terminal-style theme for the landing page at `nullcv.org`?
-```
+> *"We refuse to beg for the right to create value. We simply create it, verify it, and connect directly with those who value it."*
+
+**→ [https://nullcv.org](https://nullcv.org)**

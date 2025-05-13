@@ -1,49 +1,135 @@
-[NullCV]
-Copyright (c) [2025] [SparkliTwizzl]
+# The Cryptographic Commons License (CCL)
+Version 1.0 — April 2025  
+Issued by: The NullCV Collective  
+Identity Hash: 0x81f8abB9eC86A9D8d1A9e3Bd29345CdC235eA91e  
 
-Anti-Exploitation License Commercial Attribution-Optional v2.0 (AEL-CM-AO 2.0)
+---
 
-This is an anti-capitalist, anti-fascist, anti-bigotry, pro-human-rights project, released for free use by individuals and organizations who are tired of ill-intentioned entities exploiting their work for free and/or using their work for malicious purposes, and would rather not have such entities use or interact with their creations.
+## 🧱 Preamble
 
+The Cryptographic Commons License (CCL) exists to protect collective digital infrastructure from privatization, gatekeeping, and parasitic monetization.
 
-Permission is hereby granted, free of charge, by the creators (the "Authors") of this project and associated documentation files (the "Project"), to any person or organization (the "User") obtaining a copy of the Project, to use, modify, and distribute, for personal, educational, or commercial purposes, subject to the following conditions:
+Originally developed to support **NullCV**, this license empowers creators to **share without fear**, **verify without credentials**, and **build without permission**—ensuring that the output of human labor remains *free, transparent, and owned by no one*.
 
-    1. All copies or modified versions of the Project shall include:
-        A. The above copyright notice.
-        B. This permission notice.
-        C. Attribution of the Project to the Authors, if the User chooses to include it. If the User does so, all copies or modified versionss of the Project shall additionally include:
-            I. A disclaimer that the Authors are not affiliated with the User, and the Authors do not endorse the User's use or modification of the Project.
+This license is not just a legal framework. It is a **protocol for digital sovereignty**, and a declaration that our future belongs to builders—not brokers.
 
-    2. The User is one of the following:
-        A. An individual person, laboring for themself.
-        B. A non-profit organization.
-        C. An educational institution.
-        D. An organization that seeks shared profit for all of its members, and allows non-members to set the cost of their labor.
+---
 
-    3. If the User is an organization with owners, then all owners are workers and all workers are owners with equal equity and/or equal vote.
+## 1. Definitions
 
-    4. If the User is an organization, then the User is not law enforcement or military (as defined in Item 5C), or working for or under either.
+- **Software**: Any codebase, assets, interfaces, protocols, documentation, or data governed by this license.
+- **Contributor**: Any individual or entity who adds to or modifies the Software.
+- **Derivative Work**: Any fork, extension, modification, integration, adaptation, or transformation of the Software.
+- **Distribute**: To make available to others by any means (online, physical, federated, or otherwise).
+- **Commercial Use**: Any usage involving direct or indirect financial gain, recurring service fees, tokenized access, or inclusion in paid systems.
 
-    5. The user does not use the Project for ill-intentioned and/or malicious reasons, as determined by the Authors. Said reasons include but are not limited to:
-        A. Bigotry, including but not limited to: racism; xenophobia; homophobia; transphobia; ableism; ageism; sexism; antisemitism; zionism; religious intolerance.
-        B. Exploitation of entities not capable of giving informed consent, including but not limited to: pedophilia; zoophilia.
-        C. Support for law enforcement and/or the military, including but not limited to: police; carceral institutions; immigration enforcement.
-        D. Any purpose utilizing and/or relating to blockchain technology, including but not limited to: cryptocurrencies; non-fungible tokens ("NFT"s).
-        E. Any purpose intended to prevent knowledge and/or use of technologies and/or information which could benefit humankind, including but not limited to: strategic lawsuits against public participation ("SLAPP suits"); unjustified legal action for the purposes of forcing compliance and/or nonopposition; indefinite holding of patents without allowing for their use ("patent-squatting").
-        F. Unauthorized nontransformative reuploading of media content ("freebooting").
-        G. Unauthorized inclusion of media content in generative artificial intelligence ("generative AI / genAI") training datasets.
-        H. Nontransformative duplication of existing work without permission or attribution, i.e. plagiarism.
+---
 
+## 2. Guaranteed Freedoms
 
-    6. The User attests their agreement to the following:
-        A. Condemnation of the unlawful invasion and/or occupancy of sovereign states, including but not limited to that of Ukraine by Russia.
-        B. Condemnation of all forms of genocide against any peoples for any reason, including but not limited to that of the Rohingya people in Myanman; the people of Palestine/Gaza; the Darfuris of South Sudan.
-        C. Condemnation of all forms of slavery, servitude, and/or forced labor, including but not limited to: subjugation and exploitation under threat of violence or other harm; unlawful child labor; forced, uncompensated, and/or undercompensated prisoner labor.
-        D. Transgender, nonbinary, and/or otherwise LGBTQIA+/queer people are people, rights for LGBTQIA+/queer people are human rights which benefit all people, and LGBTQIA+/queer people are fully capable of making decisions about their own lives.
-        E. Autistic and/or otherwise neurodiverse people are people, rights for neurodiverse people are human rights which benefit all people, and neurodiverse people are fully capable of making decisions about their own lives.
-        F. Disabled and/or otherwise differently abled people are people, rights for differently abled people are human rights which benefit all people, and differently abled people are fully capable of making decisions about their own lives.
+This license guarantees the following **perpetual, irrevocable freedoms** to all users:
 
-    7. The User does not engage in and/or promote any of the activities listed in Item 5, and is not affiliated with any group and/or organization that engages in and/or promotes any of such activities. The User does not behave in a manner counter to the priciples listed in Item 6, and is not affiliated with any group and/or organization that behaves in a manner counter to such principles.
+1. **Freedom to use** the Software for any lawful purpose.
+2. **Freedom to study, audit, and modify** the Software, including its source code and design.
+3. **Freedom to distribute** the Software and any Derivative Works, without restriction.
+4. **Freedom to build on** the Software for new use cases, protocols, tools, or federated implementations.
 
+---
 
-The Project is provided "as is", without express or implied warranty of any kind, including but not limtied to the warranties of: merchantability; fitness for a particular purpose; noninfringement. In no event shall the Authors be liable for any claim; damages; or other liability, whether in action of contract; tort; or otherwise, arising from; out of; or in connection with, the Project; or the use of or dealings in the Project.
+## 3. Conditions of Use and Distribution
+
+Any use, distribution, or derivative of the Software **must**:
+
+1. **Preserve this license** without modification or restriction.
+2. **Provide complete source code**, build instructions, and relevant documentation.
+3. **Retain all contributor credits and cryptographic attributions** (where applicable).
+4. **Disclose all changes** in a publicly accessible and verifiable changelog or commit history.
+5. **Attribute** the originating project (e.g., *"Built on NullCV"*) in a visible way if publicly presented or monetized.
+6. **Maintain open development processes**—private forks used for public products are not permitted.
+
+---
+
+## 4. Restrictions and Prohibitions
+
+You may **not**:
+
+1. Re-license the Software or any Derivative Work under a proprietary or closed license.
+2. Bundle the Software into systems or products that restrict user freedoms.
+3. Use obfuscation or DRM to limit access to source, build processes, or data.
+4. Impose any additional legal, technical, or financial constraints on downstream users.
+5. Use the Software in any system that violates basic **privacy, dignity, or human rights**.
+
+---
+
+## 5. Commercial Use Terms
+
+Commercial use is permitted **only if** the following conditions are met:
+
+1. **No paywalls** for accessing the core functionality or source code.
+2. **All modifications and improvements are made public** under this license.
+3. **Payments or profits do not restrict participation** in the project.
+4. A **visible declaration of compliance** with this license is published.
+5. Optional: **Profit-sharing or contribution mechanisms** to sustain the commons are encouraged (but not mandated).
+
+> ⚠️ Note: Smart contracts and token models must not be designed to extract disproportionate value or gatekeep participation.
+
+---
+
+## 6. Reciprocal Development Requirements
+
+All Derivative Works must:
+
+1. Maintain a **public changelog**, version history, or commit log.
+2. Be **accessible in a format suitable for audit and reuse**.
+3. Encourage public discussion, contributions, and peer review.
+4. Not require permission to contribute, use, or fork.
+
+---
+
+## 7. Enforcement and Termination
+
+1. Any violation of this license **automatically terminates** the violator’s rights under it.
+2. Users who comply regain full rights instantly.
+3. **Any contributor** to the Software may initiate enforcement or publication of violations.
+4. This license is enforceable by its **spirit** and **intent**, not just its letter.
+
+---
+
+## 8. Warranty Disclaimer and Liability
+
+This Software is provided **"as is"**, with **no warranty** expressed or implied.  
+All contributors disclaim any liability for:
+
+- Damages caused by use or misuse
+- Data loss
+- Incompatibility or legal disputes
+
+Use at your own risk.
+
+---
+
+## 9. License Permanence
+
+This license:
+
+1. May not be removed, superseded, or overwritten.
+2. Applies to all future versions, forks, and Derivative Works.
+3. Exists to preserve the Software as **permanently free, open, and accessible**.
+
+---
+
+## 10. Spirit of the License
+
+The CCL protects:
+
+- **Proof over permission**
+- **Collective value over private gain**
+- **Transparency over obscurity**
+- **Cooperation over competition**
+- **Builders over brands**
+
+Any interpretation of this license must uphold the **intent to preserve freedom, transparency, and equity** for all users and contributors, present and future.
+
+---
+
+By using, modifying, or distributing the Software, you agree to **defend and extend these freedoms**.
