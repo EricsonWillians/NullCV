@@ -2,8 +2,10 @@
 name = "nullcv"
 version = "0.1.0"
 description = "Proof-of-Work, Not Promises - A decentralized talent marketplace"
-authors = ["NullCV Team"]
-readme = "README.md"
+authors = ["NullCV Team <ericsonwillians@protonmail.com>"]
+packages = [
+    { include = "nullcv", from = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
