@@ -14,6 +14,17 @@ class ServerConfig(BaseSettings):
 
     @validator("CORS_ORIGINS", pre=True)
     def _split_csv(cls, v: Union[str, List[str]]) -> List[str]:
+        """
+        Converts a comma-separated string into a list of trimmed strings for CORS origins.
+        
+        If the input is a string containing commas, splits it by commas and trims whitespace from each entry. If the input is already a list or does not contain commas, returns it unchanged.
+        
+        Args:
+            v: A string or list representing CORS origins.
+        
+        Returns:
+            A list of CORS origin strings.
+        """
         if isinstance(v, str) and "," in v:
             return [s.strip() for s in v.split(",")]
         return v

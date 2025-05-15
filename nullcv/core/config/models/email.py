@@ -19,6 +19,15 @@ class EmailConfig(BaseSettings):
 
     @validator("EMAIL_SENDER_ADDRESS")
     def _email(cls, v: str) -> str:
+        """
+        Validates that the provided string is a valid email address.
+        
+        Raises:
+            ValueError: If the input string does not contain an "@" symbol.
+        
+        Returns:
+            The validated email address string.
+        """
         if "@" not in v:
             raise ValueError("Invalid email")
         return v

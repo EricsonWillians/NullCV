@@ -17,6 +17,15 @@ class IPFSConfig(BaseSettings):
 
     @validator("IPFS_API_URL", "IPFS_GATEWAY_URL")
     def _url(cls, v: str) -> str:
+        """
+        Validates that a URL string starts with 'http://' or 'https://'.
+        
+        Raises:
+            ValueError: If the URL does not start with a valid scheme.
+        
+        Returns:
+            The validated URL string.
+        """
         if not v.startswith(("http://", "https://")):
             raise ValueError("URL must start with http:// or https://")
         return v

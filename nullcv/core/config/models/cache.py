@@ -14,6 +14,15 @@ class CacheConfig(BaseSettings):
 
     @validator("CACHE_TYPE")
     def _type(cls, v: str) -> str:
+        """
+        Validates that the provided cache type is one of the allowed options.
+        
+        Raises:
+            ValueError: If the cache type is not "memory", "redis", or "memcached".
+        
+        Returns:
+            The validated cache type string.
+        """
         if v not in {"memory", "redis", "memcached"}:
             raise ValueError("Invalid CACHE_TYPE")
         return v
