@@ -17,6 +17,15 @@ class AuthConfig(BaseSettings):
 
     @validator("SECRET_KEY")
     def _strong_key(cls, v: SecretStr) -> SecretStr:
+        """
+        Validates that the secret key is at least 32 characters long.
+        
+        Raises:
+            ValueError: If the secret key is shorter than 32 characters.
+        
+        Returns:
+            The validated secret key.
+        """
         if len(v.get_secret_value()) < 32:
             raise ValueError("SECRET_KEY must be ≥32 chars")
         return v

@@ -14,6 +14,15 @@ class BlockchainConfig(BaseSettings):
 
     @validator("CONTRACT_ADDRESS")
     def _addr(cls, v: str) -> str:
+        """
+        Validates that the provided string is a properly formatted Ethereum address.
+        
+        Raises:
+            ValueError: If the address does not start with '0x' or is not 42 characters long.
+        
+        Returns:
+            The validated Ethereum address string.
+        """
         if not (v.startswith("0x") and len(v) == 42):
             raise ValueError("Invalid Ethereum address")
         return v

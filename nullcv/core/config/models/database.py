@@ -16,6 +16,16 @@ class DatabaseConfig(BaseSettings):
 
     @validator("SQLALCHEMY_DATABASE_URI", pre=True)
     def _build_uri(cls, v: Optional[str], values: Dict[str, Any]) -> str:
+        """
+        Constructs the SQLAlchemy database URI from PostgreSQL settings if not explicitly provided.
+        
+        Args:
+            v: The existing database URI, if any.
+            values: A dictionary of current field values, including PostgreSQL credentials.
+        
+        Returns:
+            The SQLAlchemy database URI as a string.
+        """
         if v:
             return v
         pwd = values["POSTGRES_PASSWORD"].get_secret_value()

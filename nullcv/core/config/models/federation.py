@@ -14,6 +14,12 @@ class FederationConfig(BaseSettings):
 
     @validator("ACTIVITYPUB_DOMAIN")
     def _domain_required(cls, v, values):
+        """
+        Validates that ACTIVITYPUB_DOMAIN is set when federation is enabled.
+        
+        Raises:
+            ValueError: If ACTIVITYPUB_ENABLED is True and ACTIVITYPUB_DOMAIN is not provided.
+        """
         if values.get("ACTIVITYPUB_ENABLED") and not v:
             raise ValueError("ACTIVITYPUB_DOMAIN required when federation enabled")
         return v
